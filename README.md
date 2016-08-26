@@ -6,7 +6,10 @@ Crawler for Old_Map project that I worked on a while ago. This is a broader vers
 
 ## Usage
 
+```
 python crawl.py
+```
+**CONFIG.py** is hidden due to security issues
 
 ## Note
 
