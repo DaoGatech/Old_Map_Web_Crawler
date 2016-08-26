@@ -8,4 +8,7 @@ Crawler for Old_Map project that I worked on a while ago. This is a broader vers
 
 python crawl.py
 
+## Note
 
+Due to security issues, CONFIG.py will be hidden since it contains some confidential information of database and web
+crawler link
