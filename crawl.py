@@ -3,10 +3,11 @@ import json
 import re
 from bs4 import BeautifulSoup
 import lxml
+import CONFIG
 
 
 def crawl():
-    web = urllib.request.urlopen("http://www.panoramio.com/user/1643333/tags/From%201945%20to%201975")
+    web = urllib.request.urlopen(CONFIG.CRAWL_MAIN_LINK)
     soup = BeautifulSoup(web.read(), 'lxml')
     photo_ids = []
     for script in soup.find_all("script", {"src": False}):
