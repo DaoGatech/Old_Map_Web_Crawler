@@ -27,7 +27,9 @@ def crawl():
             soup = BeautifulSoup(web.read(), 'lxml')
             latitude = soup.findAll('abbr', {'class': 'latitude'})
             longitude = soup.findAll('abbr', {'class': 'longitude'})
-            print(latitude[0]['title'])
-            print(longitude[0]['title'])
+            img_title = soup.findAll('h1', {'id': 'photo-title'})[0].contents[0].strip()
+            latitude = latitude[0]['title']
+            longitude = longitude[0]['title']
+            img_url = CONFIG.IMG_SRC + str(photo) + '.jpg'
 
 crawl()
