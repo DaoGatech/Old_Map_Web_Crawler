@@ -4,7 +4,7 @@ import re
 from bs4 import BeautifulSoup
 import lxml
 import CONFIG
-
+import database
 
 def crawl():
     web = urllib.request.urlopen(CONFIG.CRAWL_MAIN_LINK)
@@ -31,5 +31,6 @@ def crawl():
             latitude = latitude[0]['title']
             longitude = longitude[0]['title']
             img_url = CONFIG.IMG_SRC + str(photo) + '.jpg'
-
+            database.insert_to_database(img_title, latitude, longitude, img_url)
+            print(str(photo) + ' = Success!')
 crawl()
