@@ -17,5 +17,4 @@ def insert_to_database(title, lat, lon, url):
         conn.commit()
         print('Database Success')
     except MySQLError as e:
-        print(e)
         pass
